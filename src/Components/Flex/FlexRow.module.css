@@ -1,0 +1,10 @@
+.frow {
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content:space-around;
+    margin: 0 auto;
+    width: 1000px;
+    height: 200%;
+    text-align:center;
+  }

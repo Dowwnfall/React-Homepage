@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+* {
+  background: #131313;
+  color:white;
+  font-family: 'Manrope', sans-serif;
+  font-weight:200;
+}
+section {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-around;
+  justify-content:space-around;
+  margin: 0 auto;
+  width: 80vw;
+  text-align:center;
+}
+div{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+.line:after {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid white;
+  }
+a {
+  text-decoration:none;
+  color:white;
+  transition: .5s;
+  padding: .75em 2em;
+}
+a:hover {
+  background: #1c1917;
+}
+
+.plus {
+  font-size:30px;
+  width:40px;
+  height:40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px; 
+  border: 2px solid white;
+  padding:none;
+  border-radius:100%;
+}
+.add{
+  transition:.3s;
+  height:max-content;
+}
+.add:hover, .add h2:hover{
+  background:#1c1917;
+}
+
+
+HTML 
+<section>
+  <div>
+    <h2 class="line">Title</h2>
+    <a href="#">test1</a>
+    <a href="#">test2</a>
+    <a href="#">test3</a>
+    <a href="#">test4</a>
+  </div>
+  <div class="add">
+    <h2>Add Another <br> List</h2>
+    <div class='plus'>+</div>
+  </div>
+</section>
+
+
+
+Template ---> https://i.redd.it/4runs09ojdd81.png

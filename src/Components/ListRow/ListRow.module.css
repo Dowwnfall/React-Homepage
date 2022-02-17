@@ -1,0 +1,41 @@
+.container{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .line:after {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid white;
+    }
+  .container a {
+    text-decoration:none;
+    color:white;
+    transition: .5s;
+    padding: .75em 2em;
+  }
+  .container a:hover {
+    background: #1c1917;
+  }
+
+  .plus {
+    font-size:30px;
+    width:40px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px; 
+    border: 2px solid white;
+    padding:none;
+    border-radius:100%;
+    margin: 0 auto;
+  }
+  .add{
+    transition:.3s;
+    height:max-content;
+    align-self: center;
+  }
+  .add:hover {
+    transform: scale(1.1);
+  }
+  
