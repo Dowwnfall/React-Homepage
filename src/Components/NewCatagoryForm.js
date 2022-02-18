@@ -16,11 +16,22 @@ const NewCatagoryForm = props => {
         console.log(title, list);
     }
     return (
-        <form onSubmit={submitHandler}>
-            <label className={styles.titleLabel}>New Catagory</label>
-            <input className={styles.titleInput} placeholder="Edit" onChange={titleChangeHandler}></input>
-            <button type="submit" className={styles.submit}>Submit</button>
+        <form onSubmit={submitHandler} className={styles.form}>
+            <h2 className={styles.h2}>New Category.</h2>
+            <div className={styles['input-box']}>
+                <div className={styles['inputs-box-div']}>
+                    <input className={`${styles.input} ${styles.single}`} placeholder="Edit" onChange={titleChangeHandler}/>
+                </div>
+                <div className={styles['inputs-box-div']}>
+                    <input type="text" className={`${styles.input} ${styles.double} ${styles.left}`} placeholder= "Name"/>
+                    <input type="text" className={`${styles.input} ${styles.double} ${styles.right}`} placeholder = "URL"/>
+                </div>
+                <button type="submit" className={`${styles.submit} ${styles.single}`}>Submit </button>
+    
+            </div>
         </form>
+        
+
     );
 }
 

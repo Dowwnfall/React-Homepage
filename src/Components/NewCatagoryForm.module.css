@@ -16,11 +16,50 @@
     outline: none;
 }
 .submit {
-    margin:0 auto;
-    margin-top: 40px;
-    display:block;
     background: none;
-    color:#8c8c8c;
-    font-size: 1.2em;
+    color:white;
+    height:40px;
     
+}
+.form {
+    width: 400px;
+    padding:20px 0;
+    border-radius:20px;
+    margin:0 auto;
+    background:#191919;
+    backdrop-filter: saturate(180%) blur(10px);
+    margin-top:20px;
+}
+.h2 {
+    text-align:center;
+    margin-top:0;
+}
+.input-box {
+    width:70%;
+    margin:0 auto;
+}
+.inputs-box-div {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width:100%;
+}
+
+.input {
+    height:30px;
+    border:solid white 1px;
+    background:none;
+    padding:5px;
+    color:white;
+  }
+
+
+.single {
+    width:100%;
+    margin: 0 0 10px 0;
+}
+
+.double {
+    width:45%;
+    margin: 0 0 10px 0;  
 }
