@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    margin: 20px;
+}
+.footer button {
+    background: none;
+    margin-left: 20px;
+    border: solid white 1px;
+    color: white;
+    font-size:xx-large;
+    font-weight: 200;
+}
