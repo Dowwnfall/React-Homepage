@@ -29,12 +29,12 @@ function App() {
       </FlexRow>
       {newCatagory && (
         <Modal onConfirm={modalHandler}>
-          <NewCatagoryForm/>
+          <NewCatagoryForm onConfirm={modalHandler}/>
         </Modal>
       )}
       {editCatagory && (
         <Modal onConfirm={() => modalEditHandler(0)}>
-          <NewCatagoryForm edit="true" editId={categoryId} />
+          <NewCatagoryForm onConfirm={() => modalEditHandler(0)} edit="true" editId={categoryId} />
         </Modal>
       )}
   

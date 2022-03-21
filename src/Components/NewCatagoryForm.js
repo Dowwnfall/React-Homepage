@@ -14,7 +14,7 @@ const NewCatagoryForm = props => {
         valueChangeHandler:linkNameChangeHandler,
         valueBlurHandler:linkNameBlurHandler,
         reset:linkNameReset,
-    } = useIsvalid(value => value.trim() !== "");
+    } = useIsvalid((value) => value.trim() !== "");
 
     const {
         value:title,
@@ -35,13 +35,18 @@ const NewCatagoryForm = props => {
         reset:urlReset,
     } = useIsvalid(value => value.trim() !== "");
 
+    
+
+
     const submitHandler = (event) => {
         event.preventDefault();
         console.log(title, linkName, url);
-        if (!props.editId) {
+        if (!props.editId && titleIsValid && urlIsValid && linkNameIsValid) {
             addToList(title, linkName, url);
-        } else if (props.editId) {
+            props.onConfirm();
+        } else if (props.editId && urlIsValid && linkNameIsValid) {
             addToList(false, linkName, url, props.editId);
+            props.onConfirm();
         }
         titleReset('');
         linkNameReset('');
@@ -53,9 +58,9 @@ const NewCatagoryForm = props => {
             {props.edit && <h2 className={styles.h2}>New Link.</h2>}
 
             <div className={styles['input-box']}>
-            {!titleIsValid && <p className={styles.invalidText}>Please enter a title.</p>}
-            {!urlIsValid && <p className={styles.invalidText}>Please enter a full url with 'http'.</p>}
-            {!linkNameIsValid && <p className={styles.invalidText}>Please enter a link name.</p>}
+            {titleHasError && <p className={styles.invalidText}>Please enter a title.</p>}
+            {urlHasError && <p className={styles.invalidText}>Please enter a full url with 'http'.</p>}
+            {linkNameHasError && <p className={styles.invalidText}>Please enter a link name.</p>}
                 {!props.edit && <div className={styles['inputs-box-div']}>
                     <input className={`${styles.input} ${styles.single}`} placeholder="Title" value={title} onChange={titleChangeHandler} onBlur={titleBlurHandler}/>
                 </div>}
